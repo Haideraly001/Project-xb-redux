@@ -30,8 +30,8 @@ const UseEffect = () => {
     <div>
       <h1 className='text-3xl'>use Effect Hook Pracitce </h1>
       <h2 className='text-2xl'> count {count} and this is Is Count {isCount}</h2>
-      <button className='text-1xl border-2 border-red-900 rounded-md p-3 mt-3' onClick={() => setCount(count + 1)}>Click Me</button>
-      <button className='text-1xl border-2 border-red-900 rounded-md p-3 mt-3' onClick={() => setIsCount(isCount + 1)}>Click Me for isCount</button>
+      <button className='text-1xl border-2 border-red-900 rounded-md p-1 mt-3 mr-2' onClick={() => setCount(count + 1)}>Click Me</button>
+      <button className='text-1xl border-2 border-red-900 rounded-md p-1 mt-3' onClick={() => setIsCount(isCount + 1)}>Click Me for isCount</button>
 
     </div >
   )
