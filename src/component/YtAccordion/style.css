@@ -3,21 +3,30 @@ h1 {
   font-weight: bold;
   padding: 10px 20px 10px 20px;
   color: white;
+  text-align: start;
 }
 
 p {
-  font-size: 17px;
+  font-size: 19px;
   text-align: start;
   padding: 1rem 2rem;
   background-color: #154c79;
   color: white;
+  border-radius: 10px;
 }
 
 .accordion-container {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
   background-color: #063970;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.accordion button {
+  background-color: white;
+  font-size: 22px;
+  margin: 10px 0px;
 }

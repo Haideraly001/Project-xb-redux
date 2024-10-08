@@ -15,22 +15,7 @@ const YtAccordion2 = () => {
   const handleMultiSelection = (dataID) => {
     const cpyMultipule = [...multipule]
     const findIndexCpyMultipule = cpyMultipule.indexOf(dataID)
-
-    if (findIndexCpyMultipule === -1) {
-      cpyMultipule.push(dataID)
-    } else {
-      cpyMultipule.splice(findIndexCpyMultipule, 1)
-    }
-    setMultipule(cpyMultipule)
-
-
-    console.log(findIndexCpyMultipule, multipule);
-
-  }
-
-  const secondSelected = () => {
-    setEnableMultiSelector(!enableMultiSelector)
-    console.log("multipule Selected");
+    console.log(findIndexCpyMultipule);
 
   }
 
@@ -38,7 +23,7 @@ const YtAccordion2 = () => {
   return (
     <div>
       <h1>Accordion</h1>
-      <button onClick={() => secondSelected()}>Enable MultiSelector</button>
+      <button onClick={() => setEnableMultiSelector(!enableMultiSelector)}>Enable MultiSelector</button>
       <div className="accordion">
         {data && data.length > 0 ?
           data.map((item, index) =>
