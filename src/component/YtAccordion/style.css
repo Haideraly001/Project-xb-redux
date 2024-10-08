@@ -1,0 +1,23 @@
+h1 {
+  font-size: 23px;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  color: white;
+}
+
+p {
+  font-size: 17px;
+  text-align: start;
+  padding: 1rem 2rem;
+  background-color: #154c79;
+  color: white;
+}
+
+.accordion-container {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #063970;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}

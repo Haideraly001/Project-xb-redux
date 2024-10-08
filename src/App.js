@@ -1,6 +1,7 @@
 import React from 'react'
 import "./App.css"
-import UseEffect from './component/useEffect/UseEffect'
+import YtAccordion from './component/YtAccordion/YtAccordion'
+// import UseEffect from './component/useEffect/UseEffect'
 // import ShoppingList from './component/ShoppingList'
 // import Accordien from './component/Accordian/Accordien'
 
@@ -10,7 +11,8 @@ const App = () => {
       {/* <h1>Shopping List</h1>
       <ShoppingList /> */}
       {/* <Accordien /> */}
-      <UseEffect />
+      {/* <UseEffect /> */}
+      <YtAccordion />
     </div>
   )
 }
