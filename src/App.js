@@ -1,6 +1,7 @@
 import React from 'react'
 import "./App.css"
-import YtAccordion from './component/YtAccordion/YtAccordion'
+import UseCallback from './component/Usecallback/UseCallback'
+// import YtAccordion from './component/YtAccordion/YtAccordion'
 // import UseEffect from './component/useEffect/UseEffect'
 // import ShoppingList from './component/ShoppingList'
 // import Accordien from './component/Accordian/Accordien'
@@ -12,7 +13,8 @@ const App = () => {
       <ShoppingList /> */}
       {/* <Accordien /> */}
       {/* <UseEffect /> */}
-      <YtAccordion />
+      {/* <YtAccordion /> */}
+      <UseCallback />
     </div>
   )
 }
