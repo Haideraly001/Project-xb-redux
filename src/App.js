@@ -1,6 +1,8 @@
 import React from 'react'
 import "./App.css"
-import UseCallback from './component/Usecallback/UseCallback'
+import Risingstar from './component/RisingStar/Risingstar'
+// import PassGen from './component/PasswordGen/PassGen'
+// import UseCallback from './component/Usecallback/UseCallback'
 // import YtAccordion from './component/YtAccordion/YtAccordion'
 // import UseEffect from './component/useEffect/UseEffect'
 // import ShoppingList from './component/ShoppingList'
@@ -14,7 +16,10 @@ const App = () => {
       {/* <Accordien /> */}
       {/* <UseEffect /> */}
       {/* <YtAccordion /> */}
-      <UseCallback />
+      {/* <UseCallback /> */}
+      {/* <PassGen /> */}
+      <Risingstar maxRating={8} />
+      {/* <Risingstar maxRating={5} /> */}
     </div>
   )
 }
