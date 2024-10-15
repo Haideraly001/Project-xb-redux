@@ -2,26 +2,29 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-const Risingstar = ({ maxRating = 5 }) => {
+const Risingstar = ({ maxRating }) => {
 
   const [star, setStar] = useState(0)
   const [hover, setHover] = useState(0)
 
+  const handleClick = (index) => {
+    setStar(index + 1)
+    console.log(index + 1);
 
-  const handleClick = (getCurrentIndex) => {
-    console.log(getCurrentIndex);
-    setStar(getCurrentIndex + 1)
   }
 
-  const handleMouseLeave = (getCurrentIndex) => {
-    console.log(getCurrentIndex);
+  const handleMouseHover = (index) => {
+    setHover(index + 1)
+    console.log(index + 1);
+  }
+
+  const handleMouseLeave = () => {
     setHover(0)
+    console.log(0);
+
   }
 
-  const handleMouseEnter = (getCurrentIndex) => {
-    console.log(getCurrentIndex);
-    setHover(getCurrentIndex + 1)
-  }
+
 
   return (
     <div className="flex flex-col items-center border m-4 p-4">
@@ -29,18 +32,17 @@ const Risingstar = ({ maxRating = 5 }) => {
       <div className="flex space-x-2">
         {
           [...Array(maxRating)].map((_, index) => {
-            return <FontAwesomeIcon
+            return <FontAwesomeIcon icon={faStar}
               key={index}
-              icon={faStar}
               onClick={() => handleClick(index)}
-              onMouseMove={() => handleMouseEnter(index)}
+              onMouseMove={() => handleMouseHover(index)}
               onMouseLeave={() => handleMouseLeave(index)}
-              size="2x"
-              className={`cursor-pointer ${(hover || star) > index ? 'text-yellow-500' : 'text-gray-400'
-                }`}
+              size='1x'
+              className={` cursor-pointer ${(hover || star) > index ? 'text-yellow-500' : 'text-gray'}`}
             />
           })
         }
+
       </div>
     </div>
   )
