@@ -1,7 +1,7 @@
 import React from 'react'
 import "./App.css"
-import Risingstar from './component/RisingStar/Risingstar'
-// import PassGen from './component/PasswordGen/PassGen'
+// import Risingstar from './component/RisingStar/Risingstar'
+import PassGen from './component/PasswordGen/PassGen'
 // import UseCallback from './component/Usecallback/UseCallback'
 // import YtAccordion from './component/YtAccordion/YtAccordion'
 // import UseEffect from './component/useEffect/UseEffect'
@@ -17,8 +17,8 @@ const App = () => {
       {/* <UseEffect /> */}
       {/* <YtAccordion /> */}
       {/* <UseCallback /> */}
-      {/* <PassGen /> */}
-      <Risingstar maxRating={8} />
+      <PassGen />
+      {/* <Risingstar maxRating={8} /> */}
       {/* <Risingstar maxRating={5} /> */}
     </div>
   )
