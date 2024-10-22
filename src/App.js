@@ -10,17 +10,20 @@ import PassGen from './component/PasswordGen/PassGen'
 
 const App = () => {
   return (
-    <div className="App" >
-      {/* <h1>Shopping List</h1>
+    <div className='bg-blue-900 max-w-full min-h-screen'>
+
+      <div className="pt-5" >
+        {/* <h1>Shopping List</h1>
       <ShoppingList /> */}
-      {/* <Accordien /> */}
-      {/* <UseEffect /> */}
-      {/* <YtAccordion /> */}
-      {/* <UseCallback /> */}
-      <PassGen />
-      {/* <Risingstar maxRating={8} /> */}
-      {/* <Risingstar maxRating={5} /> */}
-    </div>
+        {/* <Accordien /> */}
+        {/* <UseEffect /> */}
+        {/* <YtAccordion /> */}
+        {/* <UseCallback /> */}
+        <PassGen />
+        {/* <Risingstar maxRating={8} /> */}
+        {/* <Risingstar maxRating={5} /> */}
+      </div>
+    </div >
   )
 }
 
