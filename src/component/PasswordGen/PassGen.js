@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 const PassGen = () => {
   const [length, setLength] = useState(8)
@@ -17,15 +17,20 @@ const PassGen = () => {
       str += '!@#$%^&*()_+'
     }
 
-    for (let i = 0; i <= Array.length; i++) {
-      let char = Math.random(Math.random() * str.length + 1)
+    for (let i = 0; i <= length; i++) {
+      let char = Math.floor(Math.random() * str.length + 1)
       pass += str.charAt(char)
     }
 
     setPassword(pass)
 
+
   }, [length, numberAllow, charAllowed, setPassword])
 
+
+  useEffect(() => {
+    passwordGenretor()
+  }, [length, numberAllow, charAllowed, passwordGenretor])
 
   return (
     <>
