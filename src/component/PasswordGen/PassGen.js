@@ -84,6 +84,8 @@ const PassGen = () => {
             />
             <label htmlFor="numberInput" className='text-orange-400' >Charactor</label>
           </div>
+
+
         </div>
       </div>
 
