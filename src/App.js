@@ -1,15 +1,15 @@
 import React from 'react'
-import "./App.css"
+import { ProviderWrapper } from './redux/provider'
+import InputRedux from './project/InputRedux'
 
 
 const App = () => {
   return (
-    <div className='bg-blue-900 max-w-full min-h-screen'>
-
+    <ProviderWrapper>
       <div className="pt-5" >
-        redux practice
+        <InputRedux />
       </div>
-    </div >
+    </ProviderWrapper>
   )
 }
 
