@@ -1,15 +1,14 @@
 import React from 'react'
-import { ProviderWrapper } from './redux/provider'
-import InputRedux from './project/InputRedux'
-
+import ReduxeInput1 from './project/ReduxeInput1'
+import ProviderWrapper from './Redux/Provider'
 
 const App = () => {
   return (
-    <ProviderWrapper>
-      <div className="pt-5" >
-        <InputRedux />
-      </div>
-    </ProviderWrapper>
+    <div>
+      <ProviderWrapper>
+        <ReduxeInput1 />
+      </ProviderWrapper>
+    </div>
   )
 }
 

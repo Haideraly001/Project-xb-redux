@@ -1,11 +1,12 @@
 import { Provider } from "react-redux";
-import { store } from "./store";
+import { store } from './Store'
 
-
-export function ProviderWrapper({ children }) {
+const ProviderWrapper = ({ children }) => {
   return (
     <Provider store={store}>
       {children}
     </Provider>
   )
 }
+
+export default ProviderWrapper
