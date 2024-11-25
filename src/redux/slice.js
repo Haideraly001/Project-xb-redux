@@ -1,23 +1,26 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-  users: []
+  user: []
 }
 
+
 const slice = createSlice({
-  name: 'user',
+  name: "Haider ",
   initialState,
   reducers: {
-    addUser: (state, action) => {
+    userInputAdd: (state, action) => {
       const data = {
         id: nanoid(),
-        name: action.payload,
+        name: action.payload
       }
-      state.users.push(data)
+      state.user.push(data)
+      console.log(data);
     }
 
   }
 })
 
-export const { addUser } = slice.actions
-export default slice.reducer
+export const { userInputAdd } = slice.actions
+
+export default slice.reducer;
