@@ -16,11 +16,19 @@ const slice = createSlice({
       }
       state.user.push(data)
       console.log(data);
+    },
+
+    userPass: (state, action) => {
+      const isPass = {
+        id: nanoid(),
+        pass: action.payload
+      }
+      state.user.push(isPass)
     }
 
   }
 })
 
-export const { userInputAdd } = slice.actions
+export const { userInputAdd, userPass } = slice.actions
 
 export default slice.reducer;
