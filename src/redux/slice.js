@@ -4,7 +4,6 @@ const initialState = {
   user: []
 }
 
-
 const slice = createSlice({
   name: "Haider ",
   initialState,
@@ -15,7 +14,7 @@ const slice = createSlice({
         name: action.payload
       }
       state.user.push(data)
-      console.log(data);
+      // console.log(data);
     },
 
     userPass: (state, action) => {
@@ -24,11 +23,19 @@ const slice = createSlice({
         pass: action.payload
       }
       state.user.push(isPass)
-    }
+    },
 
+    userRemove: (state, action) => {
+      console.log(action);
+      const data = state.user.filter((item) => {
+        return (item.id !== action.payload)
+      })
+      state.user = data
+
+    }
   }
 })
 
-export const { userInputAdd, userPass } = slice.actions
+export const { userInputAdd, userPass, userRemove } = slice.actions
 
 export default slice.reducer;

@@ -19,13 +19,13 @@ const InputData = () => {
         type="text"
         placeholder="Enter your Name"
         onChange={(e) => setIsName(e.target.value)}
-        className="border-blue-950 p-4"
+        className=" border border-blue-950 p-4"
       />
       <input
-        type="text"
+        type="password"
         placeholder="Enter your pass"
         onChange={(e) => setPass(e.target.value)}
-        className="border-blue-950 p-4"
+        className=" border border-blue-950 p-4 m-2"
       />
       <button onClick={handleInput} className="p-4 bg-green-900 text-white">
         {" "}
