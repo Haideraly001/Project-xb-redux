@@ -10,6 +10,8 @@ const InputData = () => {
 
   const handleInput = () => {
     isDispatch(userInputAdd(isName));
+  };
+  const handlePass = () => {
     isDispatch(userPass(pass));
   };
   return (
@@ -21,13 +23,17 @@ const InputData = () => {
         onChange={(e) => setIsName(e.target.value)}
         className=" border border-blue-950 p-4"
       />
+      <button onClick={handleInput} className="p-4 bg-green-900 text-white">
+        {" "}
+        Submit
+      </button>
       <input
         type="password"
         placeholder="Enter your pass"
         onChange={(e) => setPass(e.target.value)}
         className=" border border-blue-950 p-4 m-2"
       />
-      <button onClick={handleInput} className="p-4 bg-green-900 text-white">
+      <button onClick={handlePass} className="p-4 bg-green-900 text-white">
         {" "}
         Submit
       </button>

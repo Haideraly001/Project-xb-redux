@@ -1,7 +1,8 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-  user: []
+  user: [
+  ]
 }
 
 const slice = createSlice({

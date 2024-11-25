@@ -4,6 +4,8 @@ import { userRemove } from "../Redux/slice";
 
 const UserData = () => {
   const userList = useSelector((state) => state.user);
+  console.log(userList);
+
   const dispatch = useDispatch();
 
   const handleRemove = (id) => {
@@ -15,8 +17,8 @@ const UserData = () => {
       <h2>User Data</h2>
       {userList.map((item) => (
         <div
-          key={item.id} // Key must be on the top-level element returned by the map function
-          className="flex items-center justify-between"
+          key={item.id}
+          className="flex items-center justify-between bg-green-400"
         >
           <h3>{item.name}</h3>
           <button
