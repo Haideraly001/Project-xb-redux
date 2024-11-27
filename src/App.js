@@ -1,14 +1,11 @@
 import React from 'react'
-import Redux1 from './project/Redux1'
-import { Provider } from 'react-redux'
-import { store } from './Redux/store'
+import Practice from './projects/Practice'
+
 
 const App = () => {
   return (
     <div>
-      <Provider store={store}>
-        <Redux1 />
-      </Provider>
+      <Practice />
     </div>
   )
 }
