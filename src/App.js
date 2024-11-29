@@ -1,13 +1,17 @@
 import React from 'react'
-import Redux1 from './project/Redux1'
+import AddTodo from './components/AddTodo'
+import Todo from './components/Todo'
+import { store } from './app/store'
 import { Provider } from 'react-redux'
-import { store } from './Redux/store'
 
 const App = () => {
   return (
     <div>
       <Provider store={store}>
-        <Redux1 />
+
+        <h1>Redux Toolkit Todo App</h1>
+        <AddTodo />
+        <Todo />
       </Provider>
     </div>
   )
