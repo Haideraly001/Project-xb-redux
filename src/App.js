@@ -1,19 +1,20 @@
 import React from 'react'
 import AddTodo from './components/AddTodo'
-import Todo from './components/Todo'
-import { store } from './app/store'
 import { Provider } from 'react-redux'
+import { store } from './app/store'
+import Todo from './components/Todo'
+
 
 const App = () => {
   return (
-    <div>
-      <Provider store={store}>
+    <Provider store={store}>
 
-        <h1>Redux Toolkit Todo App</h1>
+      <div className='w-full text-center m-5 '>
+        <h2 className='text-2xl font-semibold'>React Redux Todo App</h2>
         <AddTodo />
         <Todo />
-      </Provider>
-    </div>
+      </div>
+    </Provider>
   )
 }
 
