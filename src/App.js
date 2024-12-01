@@ -5,6 +5,8 @@ import { createRoutesFromElements, createBrowserRouter, RouterProvider, Route, B
 import Dashboard from './components/Dashboard'
 import Card from './components/Card'
 import Navbar from './components/Navbar'
+import { Provider } from 'react-redux'
+import { store } from './app/store'
 
 const App = () => {
 
@@ -18,14 +20,18 @@ const App = () => {
   // ))
   return (
     <div className='App'>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Product />} />
-          <Route path="/card" element={<Card />} />
-          <Route path="/Dashboard" element={<Dashboard />} />
-        </Routes>
-      </BrowserRouter>
+      <Provider store={store}>
+
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Product />} />
+            <Route path="/card" element={<Card />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+
     </div>
   )
 }

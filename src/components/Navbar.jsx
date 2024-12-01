@@ -1,6 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const cartLenght = useSelector((state) => state.cart.items);
+
   return (
     <div>
       <nav class="bg-white border-gray-200 ">
@@ -36,11 +39,11 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="Card"
+                  href="Dashboard"
                   class="block py-2 px-3 text-black bg-black rounded md:bg-transparent  md:p-0  "
                   aria-current="page"
                 >
-                  My bag 0
+                  My bag {cartLenght.length}
                 </a>
               </li>
             </ul>
