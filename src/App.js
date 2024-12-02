@@ -6,7 +6,7 @@ import Dashboard from './components/Dashboard'
 import Card from './components/Card'
 import Navbar from './components/Navbar'
 import { Provider } from 'react-redux'
-import { store } from './app/store'
+import { store } from './app/cartstore'
 
 const App = () => {
 

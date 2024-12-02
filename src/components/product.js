@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addItem } from '../app/slice'
+import { addItem } from '../app/cartslice'
 
 const Product = () => {
   const [data, setData] = useState([])

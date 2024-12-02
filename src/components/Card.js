@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { removeItem } from '../app/slice';
+import { removeItem } from '../app/cartslice';
 
 const Card = () => {
 
