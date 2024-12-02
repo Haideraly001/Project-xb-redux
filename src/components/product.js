@@ -15,7 +15,7 @@ const Product = () => {
     productList()
   }, [])
 
-  console.log(data);
+  // console.log(data);
 
   const dispatch = useDispatch()
 

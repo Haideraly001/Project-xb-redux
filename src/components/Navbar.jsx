@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const cartLenght = useSelector((state) => state.cart.items);
@@ -29,22 +30,22 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="Card"
-                  class="block py-2 px-3 text-black bg-black rounded md:bg-transparent  md:p-0  "
-                  aria-current="page"
-                >
-                  Card
-                </a>
-              </li>
-              <li>
-                <a
+                <Link
                   href="Dashboard"
                   class="block py-2 px-3 text-black bg-black rounded md:bg-transparent  md:p-0  "
                   aria-current="page"
                 >
+                  Card
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Card"
+                  class="block py-2 px-3 text-black bg-black rounded md:bg-transparent  md:p-0  "
+                  aria-current="page"
+                >
                   My bag {cartLenght.length}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
