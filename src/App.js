@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import LoadMoreBtn from './projects/LoadMoreBtn'
+import TreeMenu from './projects/TreeMenu'
 
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className='App'>
 
-      <LoadMoreBtn />
+      <TreeMenu />
 
     </div>
   )
