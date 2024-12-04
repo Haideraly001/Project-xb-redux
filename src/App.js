@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import TreeMenu from './projects/TreeMenu'
+import QRcode from './projects/QRcode'
 
 
 const App = () => {
@@ -8,8 +8,7 @@ const App = () => {
   return (
     <div className='App'>
 
-      <TreeMenu />
-
+      <QRcode />
     </div>
   )
 }
