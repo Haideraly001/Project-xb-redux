@@ -4,21 +4,21 @@ import { addProducts } from "../store/Slice1";
 import { fetchProducts } from "../store/Slice2";
 
 const ProductsPage = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
   const dispatch = useDispatch()
-  const gettingProducts = () => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setProducts(data);
-      });
-  };
+  // const gettingProducts = () => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setProducts(data);
+  //     });
+  // };
 
   useEffect(() => {
-    gettingProducts();
-    // dispatch(fetchProducts())
+    // gettingProducts();
+    dispatch(fetchProducts())
   }, [dispatch]);
 
 
@@ -27,7 +27,7 @@ const ProductsPage = () => {
   }
 
 
-  // const { data: products, status } = useSelector((state) => state.cart)
+  const { data: products, status } = useSelector((state) => state.cart)
 
   return (
     <div>
