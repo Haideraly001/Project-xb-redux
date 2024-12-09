@@ -18,12 +18,12 @@ const FilterBtn = ({ products, setFilterProducts, setIsTrue }) => {
 
   return (
     <div className='grid grid-cols-6'>
-      <div className='p-2 m-4 gap-3  rounded-md' onClick={() => setIsTrue(true)}>All</div>
+      <div className='p-1 m-4 gap-3 bg-blue-900 text-white font-semibold rounded-md' onClick={() => setIsTrue(true)}>All</div>
 
 
       {uniqueProducts.map((item, index) => (
 
-        <div className='p-2 m-4 gap-3 bg-green-400 rounded-md' key={index} onClick={() => handleCategory(item)}>
+        <div className='p-1 m-4 gap-3 bg-green-900 text-white font-semibold rounded-md' key={index} onClick={() => handleCategory(item)}>
           {item}
         </div>
       ))}
