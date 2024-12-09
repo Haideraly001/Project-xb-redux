@@ -18,7 +18,7 @@ const FilterBtn = ({ products, setFilterProducts, setIsTrue }) => {
 
   return (
     <div className='grid grid-cols-6'>
-      <div className='p-2 m-4 gap-3 bg-green-400 rounded-md' onClick={() => setIsTrue(true)}>All</div>
+      <div className='p-2 m-4 gap-3  rounded-md' onClick={() => setIsTrue(true)}>All</div>
 
 
       {uniqueProducts.map((item, index) => (
