@@ -24,8 +24,6 @@ const FilterBtn = ({ products, setFilterProducts, setIsTrue, setFilterInputs }) 
     setIsTrue(false)
     const filterInput = products.includes((item) => item.title === input)
     setFilterInputs(filterInput)
-
-
   }
 
   return (

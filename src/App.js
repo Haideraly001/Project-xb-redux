@@ -1,14 +1,13 @@
 import React from 'react'
 import './App.css'
-import FilterData from './projects/FilterData'
+import Tab from './projects/Tab'
 
 
 const App = () => {
 
   return (
     <div className='App'>
-      <FilterData />
-
+      <Tab />
     </div>
   )
 }
