@@ -5,6 +5,7 @@ const FilterData = () => {
   const [products, setProducts] = useState([]);
   const [isTrue, setIsTrue] = useState(true)
   const [filterProducts, setFilterProducts] = useState([])
+  const [filterInputs, setFilterInputs] = useState([])
 
   async function fetchData() {
     try {
@@ -22,10 +23,12 @@ const FilterData = () => {
   }, []);
 
 
+
+
   return (
     <div>
       <div>Filter App</div>
-      <FilterBtn products={products} setFilterProducts={setFilterProducts} setIsTrue={setIsTrue} />
+      <FilterBtn products={products} setFilterProducts={setFilterProducts} setIsTrue={setIsTrue} setFilterInputs={setFilterInputs} />
       <div>
         {isTrue ? (
           <div className="grid grid-cols-4 gap-4">
@@ -47,6 +50,16 @@ const FilterData = () => {
           </div>
         )
         }
+        {isTrue && (
+          <div className="grid grid-cols-4 gap-4">
+            {filterInputs.map((RenderFilterInput) => (
+              <div key={RenderFilterInput.id} className="p-4 border">
+                <img src={RenderFilterInput.image} alt={RenderFilterInput.title} className="w-24 h-24" />
+                <div>{RenderFilterInput.title}</div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-const FilterBtn = ({ products, setFilterProducts, setIsTrue }) => {
+const FilterBtn = ({ products, setFilterProducts, setIsTrue, setFilterInputs }) => {
   const [uniqueProducts, setUniqueProducts] = useState([])
+  const [uniqueInput, setUniqueInput] = useState([])
 
   useEffect(() => {
     setUniqueProducts(
@@ -13,7 +14,18 @@ const FilterBtn = ({ products, setFilterProducts, setIsTrue }) => {
     setIsTrue(false)
     const filteredProducts = products.filter((product) => product.category === ctg)
     setFilterProducts(filteredProducts)
-    console.log(filteredProducts);
+  }
+
+  useEffect(() => {
+    setUniqueInput([...new Set(products.map((items) => items.title))])
+  }, [products])
+
+  const handleInput = (input) => {
+    setIsTrue(false)
+    const filterInput = products.includes((item) => item.title === input)
+    setFilterInputs(filterInput)
+
+
   }
 
   return (
@@ -27,6 +39,7 @@ const FilterBtn = ({ products, setFilterProducts, setIsTrue }) => {
           {item}
         </div>
       ))}
+      <input type="text" onChange={(e) => handleInput(e.target.value)} className='w-50 h-10 border border-gray-950' />
     </div>
 
 
