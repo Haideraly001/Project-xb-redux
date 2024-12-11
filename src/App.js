@@ -1,13 +1,15 @@
 import React from 'react'
 import './App.css'
-import Tab from './projects/Tab'
+// import FoodApp from './projects/FoodRecipe'
+import ScrollIndecator from './projects/Scroll-indecator'
 
 
 const App = () => {
 
   return (
     <div className='App'>
-      <Tab />
+      {/* <FoodApp /> */}
+      <ScrollIndecator url={'https://dummyjson.com/products?limit=100'} />
     </div>
   )
 }
