@@ -1,21 +1,25 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
-const Modal = ({ isVisible, onClose }) => {
+const Modal = ({ isClose, children }) => {
 
-  if (!isVisible) return null
+  const handleClose = () => {
+    isClose();
+  }
 
-  const handleWrapper = (e) => {
-    if (e.target.id === "wrapper") {
-      return onClose()
+  const Refwrap = useRef()
+
+  const handlewraper = (e) => {
+    if (Refwrap.current === e.target) {
+      isClose()
     }
   }
 
   return (
-    <div className='fixed inset-0 bg-blue-950 bg-opacity-10 backdrop-blur-sm flex justify-center items-center' id='wrapper' onClick={handleWrapper}>
 
-      <div className=' w-3/6 h-4/6'>
-        <h1 className='place-self-end' onClick={onClose}>X</h1>
-        <h2 className='bg-white'>Modal</h2>
+    <div ref={Refwrap} onClick={handlewraper} className='inset-0 fixed bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center'>
+      <div className='bg-white w-3/6 h-3/6'>
+        <div className='place-self-end text-2xl curser-pointer' onClick={handleClose}>X</div>
+        {children}
       </div>
     </div>
   )
