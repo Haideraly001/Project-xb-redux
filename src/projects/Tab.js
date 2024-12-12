@@ -1,42 +1,46 @@
 import React, { useState } from 'react'
 
 const Tab = () => {
-  const [tabData, setTabData] = useState(null)
-
+  const [tabActice, isTabActive] = useState(null)
   const Data = [
     {
       id: 1,
-      name: "Haider",
-      professtion: "Front-End",
+      Name: "Haider Aly",
+      Dec: "Front-End Developer"
     },
     {
       id: 2,
-      name: "mySelf",
-      professtion: "Software Enginner"
+      Name: "Professionl Stack",
+      Dec: "MERN Stack"
     },
     {
-      id: 3,
-      name: "Ali",
-      professtion: "MERN Stack devloper"
+      id: 35,
+      Name: "Entistist",
+      Dec: "Ai / ML Python"
     }
+
   ]
 
-  const handleTab = (id) => {
-    setTabData(tabData === id ? null : id)
+  const handleTab = (idx) => {
+    isTabActive(tabActice === idx ? null : idx)
   }
-
   return (
     <div>
-      <h2>Tab's</h2>
-      {Data.map((tab) => (
-        <div key={tab.id} >
-          <h2 onClick={() => handleTab(tab.id)}>{tab.name}</h2>
-          {tabData === tab.id && (
-            <h4>{tab.professtion}</h4>
-          )}
+      <h2>single Page Tab's</h2>
+      {Data.map((item) => (
+        <div key={item.id} className='flex w-full'>
+          <div className='border w-6/12'>
+            <h1 className='text-2xl' onClick={() => handleTab(item.id)}>{item.Name}</h1>
+          </div>
+
         </div>
 
       ))}
+      <div className='w-full '>
+        {tabActice !== null && (
+          <div className='m-4 border flex justify-center items-center'> {Data.find((item) => item.id === tabActice).Dec}</div>
+        )}
+      </div>
     </div>
   )
 }
