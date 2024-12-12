@@ -1,75 +1,70 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../style/scrollnav.css"
 
 const ScrollIndecator = ({ url }) => {
-  const [isdata, setData] = useState([])
-  const [isError, setIsError] = useState("")
-  const [loading, setIsLoading] = useState(false)
-  const [isPercentage, setIsPercentage] = useState(0)
 
-  async function fetchProducts(url) {
+  const [isScroll, setIsScroll] = useState(false)
+  const [isData, setIsData] = useState([])
+  const [isPercantage, setIsPercantage] = useState(0)
+
+
+  async function handleApi(url) {
     try {
-      setIsLoading(true)
+      setIsScroll(false)
       const resp = await fetch(url)
       const data = await resp.json()
 
-      if (data.products.length > 0 && data.products) {
-        setData(data.products)
-        setIsLoading(false)
-      }
-
+      setIsData(data.products)
+      setIsScroll(true)
     }
-    catch (e) {
-      setIsError(e.message)
+    catch (error) {
+      console.error(error);
     }
   }
 
-
   useEffect(() => {
-    fetchProducts(url)
+    handleApi(url)
   }, [url])
 
-  const handleScrollPage = () => {
+  const handleScroll = () => {
     console.log(document.body.scrollTop,
       document.documentElement.scrollTop,
       document.documentElement.scrollHeight,
       document.documentElement.clientHeight);
 
-    const handleScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const heightScroll = document.body.scrollTop || document.documentElement.scrollTop;
 
-    setIsPercentage((handleScroll / height) * 100)
+    setIsPercantage((heightScroll / height) * 100)
+    console.log(isPercantage);
+
 
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScrollPage)
-
+    window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", () => { })
     }
   })
 
-
-  console.log(isPercentage);
-
-
-
   return (
-    <div className='top-progress-bar'>
-      <h1 className='text-2xl'>Scroll Indecator</h1>
-      <div className='progress-bar'>
-        <div className='current-scroll-bar' style={{ width: `${isPercentage}%` }}></div>
+    <div className='top-bar'>
+      <div className="scroll-container">
+        <div className="scroll-indicator" style={{ width: `${isPercantage}%` }}></div>
       </div>
-      <div className='data-container'>
+      <div>
+        <h2 className='text-2xl'>Scroll Indicator</h2>
+        {!isScroll && <p>Loading...</p>}
         {
-          isdata.map((item) => (
+          isData.map((item) => (
             <div key={item.id}>
-              {item.title}
+              <h3 className='text-black'>{item.title}</h3>
             </div>
           ))
         }
       </div>
+
     </div>
   )
 }
