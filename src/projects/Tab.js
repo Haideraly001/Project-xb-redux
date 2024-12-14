@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Tab = () => {
-  const [tabActice, isTabActive] = useState(null)
+  const [tabActice, isTabActive] = useState(1)
   const Data = [
     {
       id: 1,

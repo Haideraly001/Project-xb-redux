@@ -37,8 +37,6 @@ const ScrollIndecator = ({ url }) => {
 
     setIsPercantage((heightScroll / height) * 100)
     console.log(isPercantage);
-
-
   }
 
   useEffect(() => {
