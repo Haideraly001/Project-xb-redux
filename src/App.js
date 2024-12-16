@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import SearchFilter2 from './projects/SearchFilter2'
+import GithubProfile from './components/GithubProfile'
 // import ScrollIndecator from './projects/Scroll-indecator'
 
 
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className='App'>
       {/* <ScrollIndecator url={'https://dummyjson.com/products?limit=100'} /> */}
-      <SearchFilter2 />
+      <GithubProfile />
     </div>
   )
 }
