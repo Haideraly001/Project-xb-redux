@@ -4,4 +4,4 @@ React Cart with Redux
 -SetUp react project with fooddata
 Learning
 -DBMS 1st video 1 hr
--Typescript 16 to 18 vidoe
+-Typescript 16 to 18 vidoe 2jr
