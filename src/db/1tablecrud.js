@@ -1,3 +1,5 @@
+19 July 2025
+
 CREATE DATABASE G7Technologies;
 
 USE G7Technologies;
