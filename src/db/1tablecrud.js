@@ -1,5 +1,11 @@
 19 July 2025
 
+
+description 
+
+first create a simple database with two tables employees and personInfo.
+Perform basic CRUD operations on these tables.
+
 CREATE DATABASE G7Technologies;
 
 USE G7Technologies;
