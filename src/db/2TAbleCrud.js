@@ -41,5 +41,36 @@ WHERE salary BETWEEN 60000 AND 200000;
 Night practice
 CRUD practice again
 
+USE g7technologies;
 
+CREATE TABLE student(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+name VARCHAR(50),
+city VARCHAR(50),
+salary INT,
+age INT, 
+department VARCHAR(50)
+);
+
+SELECT * FROM student;
+
+INSERT INTO student(name, city,salary, age, department) 
+VALUES 
+("haider","guj", 50000, 25,"IT"),
+("Ruhaan", "lhr", 55000, 24, "SUI"),
+("Ahzam", "khi", "60000", 26, "SUI"),
+("Sajjad", "isl", "30000", 23, "ENG"),
+("Haseeb", "guj", "15000", 22, "Desgin");
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE student
+SET city = "GUJ"
+WHERE name = "haider";
+
+DELETE FROM student where name = "haider";
+
+
+-------------------
+Table CRUD operations
 
