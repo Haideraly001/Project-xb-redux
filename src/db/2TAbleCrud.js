@@ -74,3 +74,4 @@ DELETE FROM student where name = "haider";
 -------------------
 Table CRUD operations
 
+TRUNCATE TABLE student;
