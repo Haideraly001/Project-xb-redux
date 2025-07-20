@@ -1,3 +1,6 @@
+20 july 2025
+morning practice 
+
 SELECT * FROM employees;
 
 CREATE TABLE student(
@@ -31,3 +34,12 @@ WHERE department IN ( "IT");
 
 SELECT * FROM employees
 WHERE salary BETWEEN 60000 AND 200000;
+
+
+
+------------------ 
+Night practice
+CRUD practice again
+
+
+
