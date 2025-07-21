@@ -81,8 +81,10 @@ Crud operation on student again.
 Table crud operation Alter (modify, Add) update table attributes add and remove single columes.
 Change table name.
 Operations (And OR NOT )
-Clause operation  (limit, )
+Clause operation  (limit, Order by )
 
 
 
-learn about joints 
+learn about joins
+Aggregate Clause function ( Group by, Having )
+Aggregate Functions General Orders (Count, Sum, Avg, Min, Max)
