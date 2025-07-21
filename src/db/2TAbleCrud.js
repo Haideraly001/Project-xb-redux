@@ -75,3 +75,13 @@ DELETE FROM student where name = "haider";
 Table CRUD operations
 
 TRUNCATE TABLE student;
+
+-pending work 
+Crud operation on student again.
+Table crud operation Alter modify  update table attributes add single columes remove single columes.
+Operations (And OR NOT )
+Clause operation  (limit, )
+
+
+
+learn about joints 
