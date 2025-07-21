@@ -78,7 +78,8 @@ TRUNCATE TABLE student;
 
 -pending work 
 Crud operation on student again.
-Table crud operation Alter modify  update table attributes add single columes remove single columes.
+Table crud operation Alter (modify, Add) update table attributes add and remove single columes.
+Change table name.
 Operations (And OR NOT )
 Clause operation  (limit, )
 
