@@ -84,7 +84,13 @@ Operations (And OR NOT )
 Clause operation  (limit, Order by )
 
 
-
-learn about joins
 Aggregate Clause function ( Group by, Having )
 Aggregate Functions General Orders (Count, Sum, Avg, Min, Max)
+
+
+learn about joins
+
+
+---
+did'nt work 2 days
+
