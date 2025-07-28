@@ -58,3 +58,6 @@ ALTER TABLE personInfo
 ADD city VARCHAR(50) DEFAULT null;
 
 SELECT * FROM personInfo;
+
+// ------ user 
+learn about aggregation pipline 
