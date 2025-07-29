@@ -60,9 +60,12 @@ ADD city VARCHAR(50) DEFAULT null;
 SELECT * FROM personInfo;
 
 // ------ user 
+
+28 july 2025
 learn about aggregation pipline 
 will practive tomorrow
 will practive tomorrow
 
 learn and read about the joins 
 inner joins, left joins, right joins, full outer joins
+again learn about aggregation group by, having by
