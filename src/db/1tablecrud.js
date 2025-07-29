@@ -63,3 +63,6 @@ SELECT * FROM personInfo;
 learn about aggregation pipline 
 will practive tomorrow
 will practive tomorrow
+
+learn and read about the joins 
+inner joins, left joins, right joins, full outer joins
