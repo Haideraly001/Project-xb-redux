@@ -35,14 +35,16 @@ ALTER TABLE employees
 DROP COLUMN salarys;
 
 only work on CRUD operations on Table + employees data in table 
++
+Operations (And OR NOT )
+Clause operation  (limit, Order by )
+Aggregate Functions General Orders (Count, Sum, Avg, Min, Max)
 
 
 -------------remaining operations
 
-Operations (And OR NOT )
-Clause operation  (limit, Order by )
+
 Aggregate Clause function ( Group by, Having )
-Aggregate Functions General Orders (Count, Sum, Avg, Min, Max)
 joins
 
 
