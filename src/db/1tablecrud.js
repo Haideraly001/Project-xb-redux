@@ -76,4 +76,5 @@ practice all crud operations on the employees and personInfo tables
 practice all alter & table crud operations on the employees and personInfo tables
 practice all aggregation operations (sum, count, avg, max, min) on the employees and personInfo tables
 pratice all joins operations on the employees and personInfo tables  union, subquery
+practing all dbms 
 
