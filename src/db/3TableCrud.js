@@ -82,3 +82,8 @@ HAVING perPersonDEpartment < 2;
 learn about aggregate functions, clauses, and joins in SQL
 
 
+
+// new Task 
+will practice CRUD operations on tables and employees data in the table
+
+All joins on salarys and employees data in the table
