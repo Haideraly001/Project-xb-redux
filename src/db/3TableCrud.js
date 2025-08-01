@@ -34,6 +34,19 @@ CHANGE COLUMN nickname designation varchar(50);
 ALTER TABLE employees
 DROP COLUMN salarys;
 
+SELECT * FROM employees WHERE name = "Haider" OR age > 24;
+
+SELECT * FROM employees WHERE department NOT IN ("SUI");
+
+SELECT * FROM employees ORDER BY age;
+
+SELECT sum(age) FROM employees;
+
+SELECT count(name) FROM employees;
+
+
+
+
 only work on CRUD operations on Table + employees data in table 
 +
 Operations (And OR NOT )
