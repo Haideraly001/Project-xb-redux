@@ -79,6 +79,6 @@ HAVING perPersonDEpartment < 2;
 // --------------
 
 
-
+learn about aggregate functions, clauses, and joins in SQL
 
 
