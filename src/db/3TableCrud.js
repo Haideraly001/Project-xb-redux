@@ -57,9 +57,27 @@ Aggregate Functions General Orders (Count, Sum, Avg, Min, Max)
 -------------remaining operations
 
 
-Aggregate Clause function ( Group by, Having )
-joins
-joins 2 practice
+
+SELECT * FROM employees ORDER BY age;
+
+SELECT sum(age) FROM employees;
+
+ALTER TABLE employees
+ADD COLUMN salarys INT;
+
+UPDATE employees SET salarys = 30000 WHERE name = 'nouman';
+UPDATE employees SET salarys = 100000 WHERE name = 'Talal';
+UPDATE employees SET department = "SUI" WHERE name = 'Ruhaan';
+
+SELECT count(name) FROM employees;
+
+SELECT department, AVG(salarys) as avgSal FROM employees GROUP BY department;
+
+SELECT department, COUNT(department) as perPersonDepartment FROM employees GROUP BY department 
+HAVING perPersonDEpartment < 2;
+
+// --------------
+
 
 
 
