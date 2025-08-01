@@ -59,6 +59,7 @@ Aggregate Functions General Orders (Count, Sum, Avg, Min, Max)
 
 Aggregate Clause function ( Group by, Having )
 joins
+joins 2 practice
 
 
 
